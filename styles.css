@@ -77,6 +77,92 @@ select {
     url("assets/fonts/Poppins-Regular.ttf") format("truetype");
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--Light-grey);
+}
+
+/* Styling the Card */
+
+.screen-reader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--White);
+  border-radius: 1.5rem 1.5rem 6.25rem 1.5rem;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--Light-grey);
+  padding-bottom: 3.97rem;
+  margin: 3rem 1.5rem 0 1.5rem;
+}
+
+label {
+  display: block;
+  color: var(--Smokey-grey);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1875rem;
+  text-transform: uppercase;
+}
+
+/* Removing the input number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*End*/
+
+input {
+  width: 5.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-grey);
+  color: var(--Off-black);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.0125rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--Purple);
+}
+
+.card__age{
+  margin: 3.97rem 0 3rem 1.5rem;
+}
+
+.card__age li {
+  color: var(--Off-black);
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.07rem;
+}
+
+.card__age span{
+  color: var(--Purple);
 }

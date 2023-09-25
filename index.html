@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <link
       rel="icon"
       type="image/png"
@@ -17,20 +16,57 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!--  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
- -- years
-  -- months
-  -- days
-  -->
-  <h1>years</h1>
-
+    <main>
+      <div class="card">
+        <h1 class="screen-reader">
+          Calculate your age specifically by adding your date of birth
+        </h1>
+        <form action="">
+          <ul class="flex-group">
+            <li>
+              <label for="day">Day</label>
+              <input
+                type="number"
+                name="day"
+                id="day"
+                min="1"
+                max="31"
+                placeholder="DD"
+                required
+              />
+            </li>
+            <li>
+              <label for="month">Month</label>
+              <input
+                type="number"
+                name="month"
+                id="month"
+                min="1"
+                max="12"
+                placeholder="MM"
+                required
+              />
+            </li>
+            <li>
+              <label for="year">Year</label>
+              <input
+                type="number"
+                name="year"
+                id="year"
+                min="1"
+                max=".."
+                placeholder="YYYY"
+                required
+              />
+            </li>
+          </ul>
+        </form>
+        <ul class="card__age">
+          <li><span>--</span> years</li>
+          <li><span>--</span> months</li>
+          <li><span>--</span> days</li>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
