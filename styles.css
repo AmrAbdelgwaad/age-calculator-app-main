@@ -144,15 +144,33 @@ input {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.0125rem;
+  cursor: pointer;
 }
 
-input:focus {
+input:focus , input:hover {
   outline: none;
   border: 1px solid var(--Purple);
 }
 
+.card__btn{
+  border: none;
+  background: none;
+  display: block;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  background: var(--Purple);
+  padding: 1.25rem;
+  border-radius: 50%;
+  margin: -2rem auto 0;
+}
+
+.card__btn:hover{
+  background: var(--Off-black);
+}
+
 .card__age{
-  margin: 3.97rem 0 3rem 1.5rem;
+  margin: 1rem 0 3rem 1.5rem;
 }
 
 .card__age li {
