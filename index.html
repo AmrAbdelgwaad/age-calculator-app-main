@@ -21,16 +21,16 @@
         <h1 class="screen-reader">
           Calculate your age specifically by adding your date of birth
         </h1>
-        <form action="">
+        <form>
           <ul class="flex-group">
             <li>
               <label for="day">Day</label>
               <input
-                type="number"
+                type="text"
                 name="day"
                 id="day"
-                min="1"
-                max="31"
+                minlength="1"
+                maxlength="2"
                 placeholder="DD"
                 required
               />
@@ -38,11 +38,11 @@
             <li>
               <label for="month">Month</label>
               <input
-                type="number"
+                type="text"
                 name="month"
                 id="month"
-                min="1"
-                max="12"
+                minlength="1"
+                maxlength="2"
                 placeholder="MM"
                 required
               />
@@ -50,11 +50,11 @@
             <li>
               <label for="year">Year</label>
               <input
-                type="number"
+                type="text"
                 name="year"
                 id="year"
-                min="1"
-                max=".."
+                minlength="4"
+                maxlength="4"
                 placeholder="YYYY"
                 required
               />
@@ -68,11 +68,12 @@
         </form>
         <p class="screen-reader">You have</p>
         <ul class="card__age">
-          <li><span>--</span> years</li>
-          <li><span>--</span> months</li>
-          <li><span>--</span> days</li>
+          <li><span class="year">--</span> years</li>
+          <li><span class="month">--</span> months</li>
+          <li><span class="day">--</span> days</li>
         </ul>
       </div>
     </main>
+    <script src="main.js" defer></script>
   </body>
 </html>

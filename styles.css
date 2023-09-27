@@ -122,6 +122,7 @@ label {
   font-weight: 700;
   letter-spacing: 0.1875rem;
   text-transform: uppercase;
+  margin-bottom: 0.3rem;
 }
 
 /* Removing the input number arrows */
@@ -147,12 +148,13 @@ input {
   cursor: pointer;
 }
 
-input:focus , input:hover {
+input:focus,
+input:hover {
   outline: none;
   border: 1px solid var(--Purple);
 }
 
-.card__btn{
+.card__btn {
   border: none;
   background: none;
   display: block;
@@ -165,11 +167,11 @@ input:focus , input:hover {
   margin: -2rem auto 0;
 }
 
-.card__btn:hover{
+.card__btn:hover {
   background: var(--Off-black);
 }
 
-.card__age{
+.card__age {
   margin: 1rem 0 3rem 1.5rem;
 }
 
@@ -181,6 +183,43 @@ input:focus , input:hover {
   letter-spacing: -0.07rem;
 }
 
-.card__age span{
+.card__age span {
   color: var(--Purple);
+}
+
+@media (min-width: 37.5rem) {
+  .card {
+    background-color: var(--White);
+    border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+    padding-right: 3.5rem;
+  }
+  .flex-group {
+    gap: 2rem;
+    margin: 3.5rem 3.5rem 0 3.5rem;
+  }
+  label {
+    font-size: 0.875rem;
+    letter-spacing: 0.21875rem;
+    margin-bottom: 0.3rem;
+  }
+  input {
+    width: 10rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.02rem;
+  }
+  .card__btn {
+    width: 6rem;
+    height: 6rem;
+    padding: 1.62rem;
+    border-radius: 50%;
+    margin: -3rem 0 0 auto;
+  }
+  .card__age {
+    margin: 1rem 0 3.5rem 3.5rem;
+  }
+  .card__age li {
+    font-size: 6.5rem;
+    letter-spacing: -0.13rem;
+  }
 }
