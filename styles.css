@@ -125,17 +125,6 @@ label {
   margin-bottom: 0.3rem;
 }
 
-/* Removing the input number arrows */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-/*End*/
-
 input {
   width: 5.5rem;
   padding: 0.75rem 1rem;
@@ -152,6 +141,24 @@ input:focus,
 input:hover {
   outline: none;
   border: 1px solid var(--Purple);
+}
+
+/*
+input:invalid{
+  border: 1px solid var(--Light-red);
+}
+
+input:invalid + label{
+  color: var(--Light-red);
+}
+*/
+
+.error{
+ display: block;
+  color: var(--Light-red);
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .card__btn {

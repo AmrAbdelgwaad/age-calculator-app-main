@@ -21,7 +21,7 @@
         <h1 class="screen-reader">
           Calculate your age specifically by adding your date of birth
         </h1>
-        <form>
+        <form novalidate>
           <ul class="flex-group">
             <li>
               <label for="day">Day</label>
@@ -32,8 +32,10 @@
                 minlength="1"
                 maxlength="2"
                 placeholder="DD"
+                pattern="^\d{1,2}$"
                 required
               />
+              <span class="error day-error" aria-live="polite"></span>
             </li>
             <li>
               <label for="month">Month</label>
@@ -44,8 +46,10 @@
                 minlength="1"
                 maxlength="2"
                 placeholder="MM"
+                pattern="^\d{1,2}$"
                 required
               />
+              <span class="error month-error" aria-live="polite"></span>
             </li>
             <li>
               <label for="year">Year</label>
@@ -56,8 +60,10 @@
                 minlength="4"
                 maxlength="4"
                 placeholder="YYYY"
+                pattern="^\d{4}$"
                 required
               />
+              <span class="error year-error" aria-live="polite"></span>
             </li>
           </ul>
           <button class="card__btn">
