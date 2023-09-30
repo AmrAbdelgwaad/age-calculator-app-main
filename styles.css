@@ -235,5 +235,6 @@ input:hover {
   .card__age li {
     font-size: 6.5rem;
     letter-spacing: -0.13rem;
+    margin-top: -3rem;
   }
 }
