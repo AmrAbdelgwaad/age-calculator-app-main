@@ -105,6 +105,8 @@ main {
 .card {
   background-color: var(--White);
   border-radius: 1.5rem 1.5rem 6.25rem 1.5rem;
+  margin: 5.5rem 0 14.88rem;
+  width: min(21.4375rem, 90vw);
 }
 
 .flex-group {
@@ -125,8 +127,21 @@ label {
   margin-bottom: 0.3rem;
 }
 
+/* Removing the input number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* End */
+
 input {
-  width: 5.5rem;
+  width: min(5.5rem, 23vw);
+
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--Light-grey);
@@ -143,18 +158,8 @@ input:hover {
   border: 1px solid var(--Purple);
 }
 
-/*
-input:invalid{
-  border: 1px solid var(--Light-red);
-}
-
-input:invalid + label{
-  color: var(--Light-red);
-}
-*/
-
-.error{
- display: block;
+.error {
+  display: block;
   color: var(--Light-red);
   font-size: 0.875rem;
   font-style: italic;
@@ -184,7 +189,7 @@ input:invalid + label{
 
 .card__age li {
   color: var(--Off-black);
-  font-size: 3.5rem;
+  font-size: min(3.5rem, 15vw);
   font-style: italic;
   font-weight: 800;
   letter-spacing: -0.07rem;
@@ -199,6 +204,8 @@ input:invalid + label{
     background-color: var(--White);
     border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
     padding-right: 3.5rem;
+    width: min(52.5rem, 90vw);
+    margin: 10.69rem 0 6.81rem;
   }
   .flex-group {
     gap: 2rem;
@@ -210,7 +217,7 @@ input:invalid + label{
     margin-bottom: 0.3rem;
   }
   input {
-    width: 10rem;
+    width: min(10rem, 20vw);
     border-radius: 0.5rem;
     font-size: 2rem;
     letter-spacing: 0.02rem;
