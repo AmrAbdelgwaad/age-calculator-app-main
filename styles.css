@@ -190,6 +190,7 @@ input:hover {
 .card__age li {
   color: var(--Off-black);
   font-size: min(3.5rem, 15vw);
+  font-style: italic;
   font-weight: 800;
   letter-spacing: -0.07rem;
 }
