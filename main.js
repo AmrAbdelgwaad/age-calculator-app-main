@@ -52,9 +52,9 @@ form.addEventListener("submit", (event) => {
       input.style.borderColor = "hsl(0, 100%, 67%)";
     });
 
-    outputYear.innerText = "--";
-    outputMonth.innerText = "--";
-    outputDay.innerText = "--";
+    outputYear.innerText = "- -";
+    outputMonth.innerText = "- -";
+    outputDay.innerText = "- -";
   } else {
     outputYear.innerText = currentYear - birthYear;
     outputMonth.innerText = currentMonth - birthMonth;
@@ -76,20 +76,20 @@ form.addEventListener("submit", (event) => {
   function showError() {
     if (dayInput.validity.valueMissing) {
       dayError.textContent = "This field is required";
-    } else if (birthDay > 31 || birthDay < 0) {
+    } else if (birthDay > 31 || birthDay <= 0) {
       dayError.textContent = "Must be a valid day";
     }
 
     if (monthInput.validity.valueMissing) {
       monthError.textContent = "This field is required";
-    } else if (birthMonth > 12 || birthMonth < 0) {
+    } else if (birthMonth > 12 || birthMonth <= 0) {
       monthError.textContent = "Must be a valid month";
     }
     if (yearInput.validity.valueMissing) {
       yearError.textContent = "This field is required";
     } else if (birthYear > currentYear) {
       yearError.textContent = "Must be in the past";
-    } else if (birthYear < 0) {
+    } else if (birthYear <= 0) {
       yearError.textContent = "Must be a valid year";
     }
   }
