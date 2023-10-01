@@ -18,9 +18,7 @@
   <body>
     <main>
       <div class="card">
-        <h1 class="screen-reader">
-          Calculate your age specifically by adding your date of birth
-        </h1>
+        <h1 class="screen-reader">Age Calculator</h1>
         <form novalidate>
           <ul class="flex-group">
             <li>
@@ -32,9 +30,10 @@
                 min="1"
                 max="31"
                 placeholder="DD"
+                aria-describedby="day-error"
                 required
               />
-              <span class="error day-error" aria-live="polite"></span>
+              <span class="error" aria-live="polite" id="day-error"></span>
             </li>
             <li>
               <label for="month">Month</label>
@@ -45,9 +44,10 @@
                 min="1"
                 max="12"
                 placeholder="MM"
+                aria-describedby="month-error"
                 required
               />
-              <span class="error month-error" aria-live="polite"></span>
+              <span class="error" aria-live="polite" id="month-error"></span>
             </li>
             <li>
               <label for="year">Year</label>
@@ -58,9 +58,10 @@
                 min="1"
                 max="2022"
                 placeholder="YYYY"
+                aria-describedby="year-error"
                 required
               />
-              <span class="error year-error" aria-live="polite"></span>
+              <span class="error" aria-live="polite" id="year-error"></span>
             </li>
           </ul>
           <button class="card__btn">
@@ -69,8 +70,9 @@
             <span class="screen-reader">Calculate</span>
           </button>
         </form>
-        <p class="screen-reader">You have</p>
-        <ul class="card__age">
+        <h2 class="screen-reader">result</h2>
+
+        <ul class="card__age" aria-live="polite">
           <li><span class="year">- -</span> years</li>
           <li><span class="month">- -</span> months</li>
           <li><span class="day">- -</span> days</li>

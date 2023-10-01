@@ -1,9 +1,9 @@
 const form = document.querySelector("form");
 const labels = document.querySelectorAll("label");
 
-const dayError = document.querySelector(".day-error");
-const monthError = document.querySelector(".month-error");
-const yearError = document.querySelector(".year-error");
+const dayError = document.getElementById("day-error");
+const monthError = document.getElementById("month-error");
+const yearError = document.getElementById("year-error");
 
 const inputs = document.querySelectorAll("input");
 const dayInput = document.getElementById("day");
